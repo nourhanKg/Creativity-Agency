@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    box-sizing: border-box;
+}
+:root
+{
+    --mainColor:rgb(237, 140, 0);
+    --subColor:rgb(204, 93, 0);
+    --backgroundColor: rgb(255, 255, 255);
+    --alternativeColor:rgb(79, 51, 27);
+    --fontColor: rgb(0, 0, 0);
+}
+body
+{
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+.home
+{
+    width: 100%; height: 100vh; 
+}
+.home header
+{
+    display: flex;
+}
+.noShadow
+{
+    text-shadow: none;
+}
+header h1
+{
+    color: var(--fontColor, black); margin: 0;
+    padding: 3vh 0; font-weight: bold; font-family: 'Poppins', sans-serif;
+    text-transform: capitalize; padding-left: 10%; 
+}
+header .toggle
+{
+    height: 60px; width: 60px; background-color: var(--mainColor, orangered);
+    background-image: url(../images/menu.png);
+    background-size: 30px 30px; background-position: center; background-repeat: no-repeat;
+    position: fixed; cursor: pointer;
+    top: 0; right: 0; z-index: 12;
+}
+header .toggle.active
+{
+    height: 60px; width: 60px; background-color: var(--mainColor, orangered);
+    background-image: url(../images/close.png);
+    background-size: 25px 25px; background-position: center; background-repeat: no-repeat;
+    position: fixed; cursor: pointer;
+    top: 0; right: 0;
+}
+.none
+{
+    display: none;
+}
+.none.active
+{
+    display: flex; flex-direction: column; background-color: rgb(255, 255, 255, .7);
+    position: fixed; width: 100%; height: 100%; top: 0;
+    justify-content: space-evenly; align-items: center; z-index: 10;
+}
+header a
+{
+    text-decoration: none; font-family: 'Poppins', sans-serif;
+    color: var(--alternativeColor, black); text-transform: capitalize;
+    font-size: 2vw; font-weight: bold;
+}
+header a:hover, header a:focus
+{
+    color: var(--mainColor, orangered); text-decoration: none;
+}
+.home main
+{
+    padding: 0 10%;
+}
+.intro h2, .intro p
+{
+    padding: 0 10%;
+}
+.intro p
+{
+    color: var(--alternativeColor, burlywood);
+}
+main h2
+{
+    margin-top: 10vh;  
+    color: var(--fontColor, black); 
+}
+main p
+{
+    color: var(--mainColor, orangered);
+    font-family: 'Poppins', sans-serif; margin-top: 4vh;
+}
+.services, .works, .contact
+{
+    display: flex; flex-direction: row;
+    flex-wrap: wrap; margin-top: 10vh;
+    justify-content: space-evenly; text-align: center;
+}
+.services div
+{
+    position: relative;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    margin-bottom: 7%;
+}
+.services div:hover, .services div:focus
+{
+    box-shadow: 0 0 10px 1px var(--alternativeColor);
+}
+.services h3
+{
+    color: var(--fontColor, black);
+    text-transform: capitalize;
+}
+.services p
+{
+    padding: 0; 
+    color: var(--alternativeColor, burlywood);
+}
+.services i
+{
+    color: var(--alternativeColor, orangered);
+    margin-right: -12px; padding-top: 2%;
+}
+.services i:last-of-type
+{
+    color: var(--mainColor,orangered);
+    opacity: .7;
+    margin-left: -12px; position: absolute;
+    top: 10px;
+}
+.works
+{
+    padding: 0 15%;
+}
+.works div
+{
+    margin-bottom: 3%; position: relative;
+}
+.works div img
+{
+    width: 100%; height: 100%;
+}
+.works div .lunch
+{
+    position: absolute;
+    background-color: rgb(237, 140, 0, 0);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.works div a
+{
+    padding: 10px 20px; text-align: center; width: 40%; 
+    color: var(--fontColor, black); text-decoration: none; text-transform: capitalize; font-weight: bold;
+    border: 1px solid var(--fontColor, black); background: none;
+    display: none;
+}
+.works div .lunch:hover, .works div .lunch:focus
+{
+    background-color: rgb(237, 140, 0, .3);
+}
+.works div .lunch:hover a, .works div .lunch:focus a
+{
+    display: block; 
+}
+.team
+{
+    text-align: center; background-color: rgb(237, 140, 0, .4);
+}
+.team h2
+{
+    padding: 0; width: initial; color: var(--fontColor, black);
+    margin-bottom: 70px; padding-top: 30px;
+}
+.members p
+{
+    padding: 0;
+}
+.members h3, .members h4
+{
+    color: var(--fontColor, black);
+}
+.members a, .info a
+{
+    color: var(--fontColor, black); padding: 5%; display: inline-block;
+}
+.members a:hover, .members a:focus, .info a:hover, .info a:focus
+{
+    color: var(--mainColor, orangered);
+}
+.members
+{
+    padding: 0 10%; display: flex; flex-direction: row;
+    flex-wrap: wrap; justify-content: space-between;
+}
+.members img
+{
+    width: 80%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.contact
+{
+    padding: 0 5%;
+}
+.contact .form, .contact .info
+{
+    background-color: rgb(237, 140, 0, .7);
+}
+.contact .form
+{
+    display: flex; flex-direction: row; flex-wrap: wrap;
+}
+.form input, .form textarea
+{
+    padding: 10px; caret-color: var(--mainColor, orangered);
+    outline: none; margin-top: 30px; color: var(--fontColor, black);
+}
+.form textarea, .form .submit
+{
+    width: 90%; resize: none;
+}
+.form .submit
+{
+    background-color: var(--alternativeColor, burlywood);
+    border: none; font-weight: bolder; text-transform: uppercase;
+    font-size: 120%; margin-bottom: 30px;
+}
+.submit:hover
+{
+    transform: scale(0.98);
+}
+.home main a
+{
+    text-transform: capitalize;
+    width: fit-content;
+    padding: 2% 3%;
+    text-align: center;
+    background-color: var(--fontColor, black);
+    display: inline-block;
+    color: var(--mainColor, orangered);
+    font-family: 'Poppins', sans-serif;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+.home main a:hover, .home main a:focus
+{
+    cursor: pointer;
+    text-decoration: none; 
+    box-shadow: 0px 0px 7px 5px var(--mainColor);
+}
+.home main footer a
+{
+    background: none;
+}
+footer
+{
+    padding-left: 10%; padding-right: 10%; 
+    text-align: center; padding-bottom: 2%;
+}
+footer a
+{
+    padding: 0 2%; color: var(--mainColor, orangered);
+}
+footer a:hover, footer a:focus
+{
+    color: var(--alternativeColor, burlywood);
+}
+@media screen and (min-width: 280px)
+{
+    .home
+    {
+        background: none;
+    }
+    header h1
+    {
+        font-size: 8vw;
+        text-shadow: -6vw 4vh 4px rgb(237 140 0 / 70);
+    }
+    header a
+    {
+        font-size: 5vw;
+    }
+    main h2 
+    {
+        font-size: 6vw;
+        width: 100%;
+    }
+    main p, .members p
+    {
+        font-size: 4vw; 
+    }
+    .services div, .works div
+    {
+        width: 90%;
+    }
+    .works div
+    {
+        height: 40%;
+    }
+    .members div
+    {
+        width: 90%;
+    }
+    .contact .form, .contact .info, .form input
+    {
+        width: 90%;
+    }
+    .contact .info
+    {
+        margin-top: 30px;
+    }
+    .home main a
+    {
+        margin-top: 3vh;
+    }
+    .home footer
+    {
+        margin-top: 25%; 
+    }
+}
+@media screen and (min-width: 480px)
+{
+    main h2 
+    {
+        font-size: 4.4vw; width: 65%;
+    }
+    main p, .members p
+    {
+        font-size: 3.8vw; 
+    }
+    
+}
+@media screen and (min-width: 768px)
+{
+    .home
+    {
+        background-image: url(../images/home-img.jpg);
+        background-size: 35% 100%;
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    header h1
+    {
+        font-size: 5vw;
+        text-shadow: 2vw 3vh 4px rgb(237 140 0 / 70%);
+    }
+    .home main
+    {
+        width: 65%; 
+    }
+    main h2 
+    {
+        font-size: 3vw; width: 75%;
+    }
+    main p
+    {
+        font-size: 2.3vw; 
+    }
+    .members p
+    {
+        font-size: 2vw;
+    }
+    .services div, .works div
+    {
+        width: 45%;
+    }
+    .members div
+    {
+        width: 30%;
+    }
+    .contact .form 
+    {
+        width: 60%; 
+    }
+    .contact .info
+    {
+        width: 30%; margin-top: 0;
+    }
+    .form input
+    {
+        width: 45%;
+    }
+    .h
+    .home footer
+    {
+        width: 65%;  margin-top: 5%; 
+    }
+}
+@media screen and (min-width: 992px)
+{
+    header h1
+    {
+        font-size: 3vw;
+    }
+    header a
+    {
+        font-size: 2vw;
+    }
+    main h2
+    {
+        margin-top: 3vw; font-size: 2.2vw; 
+    }
+    main p
+    {
+        font-size: 1.4vw; 
+    }
+    .members p
+    {
+        font-size: 1.4vw;
+    }
+    .services div, .works div
+    {
+        width: 30%;
+    }
+    .members div
+    {
+        width: 30%;
+    }
+    .home main a
+    {
+        margin-top: 1vh;
+    }
+}
